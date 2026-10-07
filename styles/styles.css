@@ -20,6 +20,10 @@ header, footer {
     padding: 20px;
     padding: 50px;
 }
+nav {
+    display: flex;
+    justify-content: space-around;
+}
 nav a {
     text-decoration: none;
     color: black;   
@@ -35,12 +39,23 @@ nav a:hover {
     background-color: white; 
 }
 main {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     column-gap: 50px;
      padding: 80px;
+}
+h1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
 }
 img {
     width: 70%;
     border-radius: 50%;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;  
+    margin: 0 auto;  
 }
 p{
     font-size: 1.5em;
@@ -52,7 +67,13 @@ p{
 
 .emphasis {
     color: purple;
+    grid-column: 1/2;
+    grid-row: 3/4;
 }
 .greentext {
     color: green;
+}
+.info {
+    grid-column: 2/3;
+    grid-row: 1/4;
 }
